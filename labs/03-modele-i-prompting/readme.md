@@ -11,11 +11,11 @@ marcin.sulecki@sulmar.pl
 
 Na tym laboratorium sprawdzimy trzy rzeczy:
 
-1. Model — jak wybór modelu wpływa na jakość i czas odpowiedzi?
-2. Prompt — jak zero-shot, one-shot i few-shot wpływają na poprawność?
-3. Temperature — jak temperatura wpływa na powtarzalność i poprawność odpowiedzi?
+1. **Model** — jak wybór modelu wpływa na jakość i czas odpowiedzi?
+2. **Prompt** — jak *zero-shot*, *one-shot* i *few-shot* wpływają na poprawność?
+3. **Temperature** — jak *temperatura* wpływa na powtarzalność i poprawność odpowiedzi?
 
-Dodatkowo sprawdzimy structured output (JSON), ponieważ agent musi umieć przetwarzać odpowiedzi modelu programowo.
+Dodatkowo sprawdzimy **structured output (JSON)**, ponieważ agent musi umieć przetwarzać odpowiedzi modelu programowo.
 
 ### Zadanie
 
