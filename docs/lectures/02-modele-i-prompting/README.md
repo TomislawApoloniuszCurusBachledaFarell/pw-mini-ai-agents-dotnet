@@ -353,7 +353,7 @@ Po wykładzie powinieneś rozumieć:
 
 ## Laboratorium
 
-Podczas [Laboratorium 03 — Modele i prompting](../../../labs/03-models-and-prompting/readme.md)
+Podczas [Laboratorium 03 — Modele i prompting](../../labs/03-models-and-prompting/readme.md)
 porównamy modele lokalne, prompty i parametry generowania.
 
 Wykorzystamy rzeczywiste notatki kurierów, z których będziemy wydobywać
@@ -383,6 +383,6 @@ Na kolejnym wykładzie zobaczymy:
 - jak aplikacja wykonuje operacje wskazane przez model,
 - jak **MCP** pozwala udostępniać narzędzia różnym aplikacjom.
 
-**[Wykład 03 — Tool Calling i MCP →](../03-tool-calling-i-mcp/README.md)**
+**[Wykład 03 — Tool Calling i MCP →](../03-tool-calling/README.md)**
 
 > **Co zrobić, gdy model nie zna odpowiedzi, ale może wykonać działanie, które pozwoli ją uzyskać?**
