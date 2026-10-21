@@ -10,6 +10,15 @@ Podczas eksperymentów będziesz rozwijać istniejący serwer MCP dla urządzeni
 
 Wykorzystasz MCP Inspector do sprawdzania jego możliwości.
 
+| Eksperyment | Temat | Forma |
+|---|---|---|
+| EXP-00 | Poznaj serwer MCP | Ćwiczenie |
+| EXP-01 | Tools — odczyt poboru mocy | Zadanie programistyczne |
+| EXP-02 | Resources — informacje o urządzeniu | Zadanie programistyczne |
+| EXP-03 | Prompts — raport kosztów energii | Zadanie programistyczne |
+| EXP-04 | MCP Client | Ćwiczenie |
+| Dodatkowy | Zaprojektuj własny interfejs MCP | Zadanie projektowe |
+
 ---
 
 ## EXP-00 — Poznaj serwer MCP
