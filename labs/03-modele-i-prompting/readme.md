@@ -62,17 +62,7 @@ Przyjmujemy następującą interpretację:
 | EXP-03 | Zbadanie wpływu temperature |
 | EXP-04 | Structured output — JSON i walidacja |
 
-### EXP-00 — Jak oceniać wyniki?
-
-EXP-00 jest kluczowy: zanim zaczniemy optymalizować rozwiązanie, musimy ustalić, po czym poznamy, że jest lepsze.
-
-| Metryka | Znaczenie |
-|---------|-----------|
-| Floor accuracy | Odsetek poprawnie rozpoznanych pięter |
-| Elevator accuracy | Odsetek poprawnie rozpoznanych informacji o windzie |
-| Exact match | Odsetek notatek, dla których oba pola są poprawne |
-
-Dzięki temu można odkryć, że model świetnie rozpoznaje piętra, ale ma problemy z interpretacją informacji o windzie.
+**[Instrukcje eksperymentów →](./experiments.md)**
 
 ### Instalacja Ollama i pobieranie modeli
 
@@ -145,6 +135,7 @@ Wyniki są dopisywane do `results/results.csv`, a raport przygotuj na podstawie 
 
 ```
 03-modele-i-prompting/
+├── experiments.md           # instrukcje eksperymentów
 ├── src/
 │   ├── ModelLab/            # wspólny klient Ollama i uruchamianie eksperymentów
 │   └── Experiments/
