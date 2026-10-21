@@ -7,7 +7,7 @@
 ---
 
 **Marcin Sulecki**  
-marcin.sulecki@sulmar.pl
+marcin.sulecki@pw.edu.pl
 
 Na tym laboratorium zobaczymy **agenta AI**, który samodzielnie dobiera działania w celu realizacji zadania użytkownika.
 

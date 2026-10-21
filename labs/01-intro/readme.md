@@ -7,7 +7,7 @@
 ---
 
 **Marcin Sulecki**  
-marcin.sulecki@sulmar.pl
+marcin.sulecki@pw.edu.pl
 
 Organizacja przedmiotu, zespoły, wymagania projektu.
 

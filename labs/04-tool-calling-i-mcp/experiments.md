@@ -7,7 +7,7 @@
 ---
 
 **Marcin Sulecki**  
-marcin.sulecki@sulmar.pl
+marcin.sulecki@pw.edu.pl
 
 Eksperymenty wykonujemy na przykładach z repozytorium [Shelly](https://github.com/sulmar/shelly).
 

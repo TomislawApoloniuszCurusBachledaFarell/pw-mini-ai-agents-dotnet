@@ -7,6 +7,6 @@
 ---
 
 **Marcin Sulecki**  
-marcin.sulecki@sulmar.pl
+marcin.sulecki@pw.edu.pl
 
 Krótkie prezentacje pomysłów zespołów.

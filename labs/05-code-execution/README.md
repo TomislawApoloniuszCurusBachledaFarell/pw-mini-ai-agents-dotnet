@@ -7,7 +7,7 @@
 ---
 
 **Marcin Sulecki**  
-marcin.sulecki@sulmar.pl
+marcin.sulecki@pw.edu.pl
 
 Na tym laboratorium zobaczymy **Code Execution**, czyli generowanie i wykonywanie kodu przez model.
 
