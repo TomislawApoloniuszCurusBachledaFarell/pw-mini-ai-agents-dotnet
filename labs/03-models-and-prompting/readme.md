@@ -134,7 +134,7 @@ Wyniki są dopisywane do `results/results.csv`, a raport przygotuj na podstawie 
 ### Struktura
 
 ```
-03-modele-i-prompting/
+03-models-and-prompting/
 ├── experiments.md           # instrukcje eksperymentów
 ├── src/
 │   ├── ModelLab/            # wspólny klient Ollama i uruchamianie eksperymentów

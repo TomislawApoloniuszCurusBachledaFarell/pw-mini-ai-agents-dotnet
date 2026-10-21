@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 05 — Eksperymenty
+## Laboratorium 06 — Eksperymenty
 
 ### Code Execution
 
@@ -57,4 +57,4 @@ Po wykonaniu eksperymentu powinieneś rozumieć:
 
 - jakie możliwości i zagrożenia wprowadza Code Execution.
 
-Na kolejnym laboratorium: [Laboratorium 06 — Architektura agentów AI](../06-architektura-agentow/README.md).
+Na kolejnym laboratorium: [Laboratorium 07 — Embeddings](../07-embeddings/readme.md).

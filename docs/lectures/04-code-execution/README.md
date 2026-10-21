@@ -357,7 +357,7 @@ Porównamy trzy podejścia:
 
 Sprawdzimy również, jak agent reaguje na błędy wykonania i jakie ograniczenia powinno mieć środowisko uruchamiające kod.
 
-**[Laboratorium 05 — Code Execution →](../../../labs/05-code-execution/README.md)**
+**[Laboratorium 06 — Code Execution →](../../../labs/06-code-execution/README.md)**
 
 ## Na kolejnym wykładzie
 

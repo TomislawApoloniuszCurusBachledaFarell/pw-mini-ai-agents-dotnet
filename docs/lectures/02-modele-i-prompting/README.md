@@ -353,7 +353,7 @@ Po wykładzie powinieneś rozumieć:
 
 ## Laboratorium
 
-Podczas [Laboratorium 03 — Modele i prompting](../../../labs/03-modele-i-prompting/readme.md)
+Podczas [Laboratorium 03 — Modele i prompting](../../../labs/03-models-and-prompting/readme.md)
 porównamy modele lokalne, prompty i parametry generowania.
 
 Wykorzystamy rzeczywiste notatki kurierów, z których będziemy wydobywać

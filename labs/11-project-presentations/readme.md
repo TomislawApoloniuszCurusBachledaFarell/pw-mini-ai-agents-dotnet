@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 10 — Project Presentations
+## Laboratorium 11 — Project Presentations
 
 ### Która część waszego rozwiązania rzeczywiście wymaga AI?
 

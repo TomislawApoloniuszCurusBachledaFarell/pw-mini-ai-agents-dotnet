@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 05 — Code Execution
+## Laboratorium 06 — Code Execution
 
 ### Co zrobić, gdy agent nie ma gotowego narzędzia do rozwiązania problemu?
 
@@ -13,7 +13,7 @@ Na tym laboratorium zobaczymy **Code Execution**, czyli generowanie i wykonywani
 
 ### Cel laboratorium
 
-Na [Laboratorium 04](../04-tool-calling-i-mcp/README.md) model korzystał z funkcji przygotowanych przez programistę.
+Na [Laboratorium 04](../04-tool-calling-and-mcp/README.md) model korzystał z funkcji przygotowanych przez programistę.
 
 Teraz sprawdzimy, jak agent może wygenerować kod Pythona, uruchomić go w kontenerze Docker
 i wykorzystać wynik wykonania do odpowiedzi użytkownikowi.
@@ -59,7 +59,7 @@ Do wykonania ćwiczeń potrzebne są:
 - repozytorium [Shelly](https://github.com/sulmar/shelly) i uruchomiony symulator
 
 Model, repozytorium i symulator przygotuj zgodnie z
-[Laboratorium 04 — Przygotowanie środowiska](../04-tool-calling-i-mcp/README.md#przygotowanie-środowiska).
+[Laboratorium 04 — Przygotowanie środowiska](../04-tool-calling-and-mcp/README.md#przygotowanie-środowiska).
 
 Przykład `06-Shelly.CodeExecution` uruchamiaj zgodnie z instrukcją w jego katalogu.
 

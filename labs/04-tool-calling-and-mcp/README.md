@@ -16,8 +16,8 @@ Na tym laboratorium poznamy:
 3. **MCP** — jak udostępniać narzędzia niezależnie od konkretnej aplikacji?
 
 Na kolejnych laboratoriach wykorzystamy te same przykłady do poznania
-[Code Execution](../05-code-execution/README.md) oraz
-[architektury agentów AI](../06-architektura-agentow/README.md).
+[Code Execution](../06-code-execution/README.md) oraz
+[architektury agentów AI](../09-agent-architecture/README.md).
 
 ### Scenariusz
 

@@ -1,8 +1,8 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 06 — Skills
+## Laboratorium 10 — Evaluation & Security
 
-### Skąd agent wie, jak wykonać zadanie?
+### Co może pójść nie tak?
 
 ---
 

@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 06 — Eksperymenty
+## Laboratorium 09 — Eksperymenty
 
 ### Architektura agentów AI
 

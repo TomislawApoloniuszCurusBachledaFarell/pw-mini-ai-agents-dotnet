@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 06 — Architektura agentów AI
+## Laboratorium 09 — Architektura agentów AI
 
 ### Jak model może realizować cel wymagający kilku działań?
 
@@ -13,8 +13,8 @@ Na tym laboratorium zobaczymy **agenta AI**, który samodzielnie dobiera działa
 
 ### Cel laboratorium
 
-Na wcześniejszych laboratoriach poznaliśmy [Tool Calling i MCP](../04-tool-calling-i-mcp/README.md)
-oraz [Code Execution](../05-code-execution/README.md).
+Na wcześniejszych laboratoriach poznaliśmy [Tool Calling i MCP](../04-tool-calling-and-mcp/README.md)
+oraz [Code Execution](../06-code-execution/README.md).
 
 Teraz sprawdzimy, jak agent obserwuje stan urządzenia, podejmuje decyzje, wykonuje działania
 i weryfikuje ich rezultaty — oraz jak jego możliwości zależą od dostępnych narzędzi.
@@ -59,7 +59,7 @@ Do wykonania ćwiczeń potrzebne są:
 - repozytorium [Shelly](https://github.com/sulmar/shelly) i uruchomiony symulator
 
 Model, repozytorium i symulator przygotuj zgodnie z
-[Laboratorium 04 — Przygotowanie środowiska](../04-tool-calling-i-mcp/README.md#przygotowanie-środowiska).
+[Laboratorium 04 — Przygotowanie środowiska](../04-tool-calling-and-mcp/README.md#przygotowanie-środowiska).
 
 Przykład `05-Shelly.Agent` uruchamiaj zgodnie z instrukcją w jego katalogu.
 

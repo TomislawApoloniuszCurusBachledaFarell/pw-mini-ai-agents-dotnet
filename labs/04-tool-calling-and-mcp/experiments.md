@@ -180,6 +180,6 @@ Po wykonaniu eksperymentów powinieneś rozumieć:
 - jak rozszerzać możliwości modelu przez Tool Calling,
 - jak serwer MCP udostępnia narzędzia różnym klientom.
 
-Na kolejnym laboratorium: [Laboratorium 05 — Code Execution](../05-code-execution/README.md).
+Na kolejnym laboratorium: [Laboratorium 05 — Skills](../05-skills/readme.md).
 
 > **Nie pytamy tylko, czy model potrafi wykonać zadanie. Pytamy również, jakie możliwości musimy mu udostępnić, aby mógł je wykonać.**
