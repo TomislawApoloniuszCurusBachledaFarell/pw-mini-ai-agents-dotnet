@@ -1,93 +1,248 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 05 — MCP
+## Laboratorium 05 — Model Context Protocol (MCP)
 
-### Jak udostępniać narzędzia niezależnie od konkretnej aplikacji?
+### Jak udostępniać narzędzia, dane i instrukcje aplikacjom AI?
 
 ---
 
 **Marcin Sulecki**  
 marcin.sulecki@pw.edu.pl
 
-Na tym laboratorium poznamy:
+## Cel laboratorium
 
-1. **Serwer MCP** — jak udostępniać narzędzia przez protokół MCP?
-2. **MCP Inspector** — jak odkrywać i testować narzędzia serwera?
-3. **Klient MCP** — jak odkryte narzędzia udostępnić modelowi językowemu?
+Podczas poprzedniego laboratorium poznaliśmy **Tool Calling** — mechanizm pozwalający modelowi językowemu wybierać i wywoływać funkcje udostępnione przez aplikację.
 
-Na [Laboratorium 04](../04-tool-calling/README.md) model korzystał z narzędzi zdefiniowanych
-bezpośrednio w aplikacji. Teraz udostępnimy te same operacje na urządzeniu Shelly przez **Model Context Protocol (MCP)**.
+Tym razem zajmiemy się **Model Context Protocol (MCP)**.
 
-### Scenariusz
+MCP pozwala aplikacjom udostępniać swoje możliwości w ustandaryzowany sposób, niezależnie od konkretnego modelu językowego.
 
-Ponownie wykorzystamy inteligentne gniazdko **Shelly Plug S Gen3** z podłączoną lampką
-oraz jego API HTTP poznane na [Laboratorium 04](../04-tool-calling/README.md#dla-zainteresowanych).
+Poznamy trzy podstawowe mechanizmy:
 
-Operacje sterowania lampką udostępni serwer MCP. Sprawdzimy je najpierw przez MCP Inspector,
-a następnie przez klienta MCP, z którego korzysta model językowy:
-
-> Jaką moc pobiera teraz lampka?
-
-Do wykonania ćwiczeń nie jest wymagane fizyczne urządzenie Shelly — można korzystać z symulatora.
-
-### Przykłady
-
-Kod źródłowy znajduje się w osobnym repozytorium:
-
-**[Shelly — od HTTP do agentów AI](https://github.com/sulmar/shelly)**
-
-| Projekt | Temat | Opis |
+| Mechanizm | Przeznaczenie | Przykład Shelly |
 |---|---|---|
-| [00-Shelly.Simulator](https://github.com/sulmar/shelly/tree/main/00-Shelly.Simulator) | Symulator | Symuluje urządzenie Shelly i udostępnia jego API HTTP. |
-| [03-Shelly.Mcp](https://github.com/sulmar/shelly/tree/main/03-Shelly.Mcp) | MCP Server | Udostępnia narzędzia przez protokół MCP. |
-| [04-Shelly.McpClient](https://github.com/sulmar/shelly/tree/main/04-Shelly.McpClient) | MCP Client | Odkrywa narzędzia serwera MCP i udostępnia je modelowi. |
+| **Tools** | Wykonywanie operacji | Włącz lampkę |
+| **Resources** | Udostępnianie danych i kontekstu | Odczytaj informacje o urządzeniu |
+| **Prompts** | Udostępnianie szablonów interakcji | Przygotuj raport zużycia energii |
 
-### Eksperymenty
+**Pytanie przewodnie:**
 
-| Eksperyment | Temat | Forma |
-|---|---|---|
-| EXP-00 | MCP — Inspector, serwer i klient | Zadanie programistyczne |
-| EXP-01 | Dla chętnych — `Switch.Toggle` w MCP | Zadanie programistyczne |
+> Kiedy udostępnić funkcję jako Tool, kiedy dane jako Resource, a kiedy instrukcję jako Prompt?
 
-**[Instrukcje eksperymentów →](./experiments.md)**
+## 1. Architektura MCP
 
-### Przygotowanie środowiska
+W architekturze MCP występują trzy podstawowe elementy:
 
-Do wykonania ćwiczeń potrzebne są:
+- **MCP Host** — aplikacja zarządzająca połączeniami z serwerami MCP.
+- **MCP Client** — komponent komunikujący się z serwerem MCP.
+- **MCP Server** — aplikacja udostępniająca Tools, Resources i Prompts.
 
-- .NET SDK
-- [Ollama](https://ollama.com/download) z modelem obsługującym Tool Calling (np. `qwen3:8b`)
-- Node.js i npm — do uruchomienia MCP Inspector
-- repozytorium [Shelly](https://github.com/sulmar/shelly) i uruchomiony symulator
+```mermaid
+flowchart LR
+    Host["MCP Host"] --> Client["MCP Client"]
+    Client <-->|MCP| Server["Shelly MCP Server"]
 
-#### 1. Przygotuj model, repozytorium i symulator
+    Server --> Tools["Tools"]
+    Server --> Resources["Resources"]
+    Server --> Prompts["Prompts"]
 
-Model, repozytorium i symulator przygotuj zgodnie z
-[Laboratorium 04 — Przygotowanie środowiska](../04-tool-calling/README.md#przygotowanie-środowiska).
+    Tools --> API["Shelly HTTP API"]
+    Resources --> API
+```
 
-#### 2. Uruchom MCP Inspector
+**Ważne:** serwer MCP nie wymaga modelu językowego.
+
+Możemy komunikować się z nim bezpośrednio, wykorzystując MCP Inspector.
+
+## 2. Przykład — Shelly
+
+Wykorzystamy znane z poprzedniego laboratorium inteligentne gniazdko Shelly Plug S Gen3.
+
+W repozytorium Shelly znajdują się przykłady:
+
+| Projekt | Przeznaczenie |
+|---|---|
+| `00-Shelly.Simulator` | Symulator urządzenia Shelly |
+| `03-Shelly.Mcp` | Serwer MCP |
+| `04-Shelly.McpClient` | Klient MCP |
+
+Serwer MCP komunikuje się z urządzeniem przez HTTP API.
+
+Klient MCP odkrywa możliwości serwera i może udostępniać narzędzia modelowi językowemu.
+
+## 3. Tools
+
+Tools umożliwiają klientowi MCP wykonywanie operacji udostępnionych przez serwer.
+
+Przykładowe narzędzia:
+
+- włączenie lampki,
+- wyłączenie lampki,
+- odczyt aktualnego stanu,
+- odczyt poboru mocy.
+
+W aplikacji korzystającej z LLM model może wybrać odpowiednie narzędzie na podstawie polecenia użytkownika.
+
+Przykład:
+
+> Włącz lampkę.
+
+Model wybiera narzędzie, a klient MCP przekazuje wywołanie do serwera.
+
+## 4. Resources
+
+Resources służą do udostępniania danych i kontekstu.
+
+Mogą reprezentować między innymi:
+
+- dokumenty,
+- pliki,
+- konfigurację,
+- informacje o urządzeniach,
+- dane udostępniane przez zewnętrzne systemy.
+
+Przykładowy zasób:
+
+```text
+shelly://device/info
+```
+
+Mógłby zawierać:
+
+```json
+{
+  "name": "Lampka biurkowa",
+  "model": "Shelly Plug S Gen3",
+  "location": "Pokój 204"
+}
+```
+
+To przykładowy schemat danych, który można zaimplementować w ramach ćwiczenia.
+
+**Pytanie:**
+
+> Czym różni się odczyt informacji o urządzeniu przez Resource od wywołania narzędzia GetDeviceInfo?
+
+## 5. Prompts
+
+Prompts pozwalają serwerowi MCP udostępniać wielokrotnego użytku szablony interakcji z modelem.
+
+Przykładowy prompt:
+
+```text
+energy-report
+```
+
+Argumenty:
+
+- liczba godzin,
+- cena energii za kWh.
+
+Przykładowe zastosowanie:
+
+> Przygotuj raport kosztów użytkowania lampki przez 500 godzin przy cenie 4,50 zł/kWh.
+
+Serwer MCP może zwrócić szablon wiadomości zawierający instrukcje przygotowania raportu.
+
+**Ważne:** MCP Prompt nie wykonuje samodzielnie obliczeń ani nie uruchamia modelu. Dostarcza wiadomości, które klient może wykorzystać podczas interakcji z LLM.
+
+## 6. MCP Inspector
+
+Do poznawania i testowania możliwości serwera wykorzystamy **MCP Inspector**.
+
+Uruchomienie:
 
 ```bash
 npx @modelcontextprotocol/inspector
 ```
 
-Połącz Inspector z serwerem `03-Shelly.Mcp`, używając transportu obsługiwanego przez serwer.
+Inspector umożliwia:
 
-#### 3. Uruchom serwer i klienta MCP
+- odkrywanie narzędzi,
+- wywoływanie narzędzi,
+- przeglądanie zasobów,
+- odczytywanie zasobów,
+- przeglądanie dostępnych promptów,
+- pobieranie promptów wraz z argumentami.
 
-Przykłady `03-Shelly.Mcp` i `04-Shelly.McpClient` uruchamiaj zgodnie z instrukcjami w ich katalogach.
+Pozwala więc testować serwer MCP bez modelu językowego.
 
-### Najważniejsze pojęcia
+## 7. Środowisko
 
-| Pojęcie | Znaczenie |
-|---|---|
-| MCP | Protokół udostępniania narzędzi i innych zasobów klientom |
-| MCP Server | Udostępnia narzędzia przez protokół MCP |
-| MCP Client | Odkrywa narzędzia serwera MCP i udostępnia je modelowi |
-| MCP Inspector | Narzędzie do testowania serwerów MCP |
+Wymagane:
 
-> **Model wybiera narzędzie, ale to aplikacja odpowiada za jego wykonanie.**
+- .NET SDK zgodny z projektami Shelly,
+- Node.js i npm,
+- MCP Inspector,
+- repozytorium Shelly.
 
-### Wykład
+Dodatkowo:
 
-Teoria: [Wykład 03 — Tool Calling i MCP](../../lectures/03-tool-calling/README.md)
+- Ollama — do eksperymentów wykorzystujących model językowy.
+
+### Uruchomienie symulatora
+
+```bash
+dotnet run --project 00-Shelly.Simulator
+```
+
+### Uruchomienie serwera MCP
+
+Skorzystaj z instrukcji uruchamiania projektu `03-Shelly.Mcp`.
+
+Zwróć uwagę na wykorzystywany transport MCP oraz sposób przekazywania adresu API Shelly.
+
+### Uruchomienie klienta MCP
+
+```bash
+dotnet run --project 04-Shelly.McpClient
+```
+
+Dokładne argumenty uruchomieniowe sprawdź w dokumentacji projektu.
+
+## 8. Eksperymenty
+
+| Eksperyment | Temat | Główne pytanie |
+|---|---|---|
+| EXP-00 | MCP Inspector | Jak odkrywać możliwości serwera MCP? |
+| EXP-01 | Tools | Jak udostępnić nową operację? |
+| EXP-02 | Resources | Jak udostępnić dane bez definiowania narzędzia? |
+| EXP-03 | Prompts | Jak udostępnić szablon interakcji? |
+| EXP-04 | MCP Client | Jak aplikacja wykorzystuje możliwości serwera? |
+
+Szczegółowe zadania:
+
+**[Eksperymenty — experiments.md](./experiments.md)**
+
+## 9. Najważniejsze pytania
+
+1. Czy MCP wymaga modelu językowego?
+2. Czym różnią się Tools, Resources i Prompts?
+3. Czy każde API powinno być udostępniane jako Tool?
+4. Kto decyduje o wykorzystaniu Resource?
+5. Czy MCP Prompt jest tym samym co instrukcja systemowa?
+6. Czy dodanie nowego narzędzia wymaga zmiany kodu klienta?
+
+## Materiały
+
+- [Model Context Protocol](https://modelcontextprotocol.io/)
+- [MCP — Tools](https://modelcontextprotocol.io/specification/2025-06-18/server/tools)
+- [MCP — Resources](https://modelcontextprotocol.io/specification/2025-06-18/server/resources)
+- [MCP — Prompts](https://modelcontextprotocol.io/specification/2025-06-18/server/prompts)
+- [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
+- [Model Context Protocol — C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+
+## Podsumowanie
+
+Po laboratorium powinieneś rozumieć:
+
+1. Jak działa serwer MCP.
+2. Jak odkrywać możliwości serwera.
+3. Czym różnią się Tools, Resources i Prompts.
+4. Jak udostępniać nowe możliwości serwera.
+5. Jak testować serwer bez modelu językowego.
+6. Jak klient MCP współpracuje z modelem.
+
+> **Tool Calling pozwala modelowi wybierać działania.**
+>
+> **MCP pozwala aplikacjom udostępniać narzędzia, dane i szablony interakcji.**
