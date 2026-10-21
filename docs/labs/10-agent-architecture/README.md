@@ -13,7 +13,7 @@ Na tym laboratorium zobaczymy **agenta AI**, który samodzielnie dobiera działa
 
 ### Cel laboratorium
 
-Na wcześniejszych laboratoriach poznaliśmy [Tool Calling i MCP](../04-tool-calling/README.md)
+Na wcześniejszych laboratoriach poznaliśmy [Tool Calling](../04-tool-calling/README.md), [MCP](../05-mcp/README.md)
 oraz [Code Execution](../07-code-execution/README.md).
 
 Teraz sprawdzimy, jak agent obserwuje stan urządzenia, podejmuje decyzje, wykonuje działania

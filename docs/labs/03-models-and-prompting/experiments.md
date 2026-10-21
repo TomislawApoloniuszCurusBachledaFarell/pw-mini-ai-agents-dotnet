@@ -118,4 +118,4 @@ Po wykonaniu eksperymentów powinieneś rozumieć:
 - jak wybór modelu, promptu i temperatury wpływa na wyniki,
 - dlaczego agent potrzebuje odpowiedzi w ustrukturyzowanym formacie.
 
-Na kolejnym laboratorium: [Laboratorium 04 — Tool Calling i MCP](../04-tool-calling/README.md).
+Na kolejnym laboratorium: [Laboratorium 04 — Tool Calling](../04-tool-calling/README.md).

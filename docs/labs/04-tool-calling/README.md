@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 04 — Tool Calling i MCP
+## Laboratorium 04 — Tool Calling
 
 ### Jak sprawić, żeby model językowy nie tylko odpowiadał, ale również wykonywał działania?
 
@@ -13,9 +13,9 @@ Na tym laboratorium poznamy:
 
 1. **HTTP API** — jak aplikacja komunikuje się z urządzeniem?
 2. **Tool Calling** — jak model wybiera funkcje i przekazuje ich argumenty?
-3. **MCP** — jak udostępniać narzędzia niezależnie od konkretnej aplikacji?
 
 Na kolejnych laboratoriach wykorzystamy te same przykłady do poznania
+[MCP](../05-mcp/README.md),
 [Code Execution](../07-code-execution/README.md) oraz
 [architektury agentów AI](../10-agent-architecture/README.md).
 
@@ -64,8 +64,6 @@ Kod źródłowy znajduje się w osobnym repozytorium:
 | [00-Shelly.Simulator](https://github.com/sulmar/shelly/tree/main/00-Shelly.Simulator) | Symulator | Symuluje urządzenie Shelly i udostępnia jego API HTTP. |
 | [01-Shelly.Http](https://github.com/sulmar/shelly/tree/main/01-Shelly.Http) | HTTP API | Bezpośrednie sterowanie urządzeniem z aplikacji .NET. |
 | [02-Shelly.ToolCalling](https://github.com/sulmar/shelly/tree/main/02-Shelly.ToolCalling) | Tool Calling | Model wybiera i wywołuje funkcje sterujące urządzeniem. |
-| [03-Shelly.Mcp](https://github.com/sulmar/shelly/tree/main/03-Shelly.Mcp) | MCP Server | Udostępnia narzędzia przez protokół MCP. |
-| [04-Shelly.McpClient](https://github.com/sulmar/shelly/tree/main/04-Shelly.McpClient) | MCP Client | Odkrywa narzędzia serwera MCP i udostępnia je modelowi. |
 
 ### Eksperymenty
 
@@ -73,8 +71,7 @@ Kod źródłowy znajduje się w osobnym repozytorium:
 |---|---|---|
 | EXP-00 | HTTP API | Ćwiczenie |
 | EXP-01 | Tool Calling — odczyt stanu lampki | Zadanie programistyczne |
-| EXP-02 | MCP — Inspector, serwer i klient | Zadanie programistyczne |
-| EXP-03 | Dla chętnych — `Switch.Toggle` | Zadanie programistyczne |
+| EXP-02 | Dla chętnych — `Switch.Toggle` | Zadanie programistyczne |
 
 **[Instrukcje eksperymentów →](./experiments.md)**
 
@@ -84,7 +81,6 @@ Do wykonania ćwiczeń potrzebne są:
 
 - .NET SDK
 - [Ollama](https://ollama.com/download)
-- Node.js i npm — do uruchomienia MCP Inspector
 
 #### 1. Pobierz model
 
@@ -136,7 +132,6 @@ Pozostałe przykłady uruchamiaj zgodnie z instrukcjami w ich katalogach.
 | Tool | Funkcja udostępniona modelowi przez aplikację |
 | Tool Calling | Mechanizm, w którym model zgłasza żądanie wywołania funkcji |
 | Tool Result | Wynik wykonania narzędzia przekazywany do modelu |
-| MCP | Protokół udostępniania narzędzi i innych zasobów klientom |
 
 > **Model wybiera narzędzie, ale to aplikacja odpowiada za jego wykonanie.**
 
