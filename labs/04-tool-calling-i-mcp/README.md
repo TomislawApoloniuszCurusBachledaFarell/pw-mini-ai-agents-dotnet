@@ -1,6 +1,6 @@
 # Tworzenie agentów AI w .NET
 
-## Laboratorium 04 — Tool Calling
+## Laboratorium 04 — Tool Calling i MCP
 
 ### Jak sprawić, żeby model językowy nie tylko odpowiadał, ale również wykonywał działania?
 
@@ -14,9 +14,10 @@ Na tym laboratorium poznamy:
 1. **HTTP API** — jak aplikacja komunikuje się z urządzeniem?
 2. **Tool Calling** — jak model wybiera funkcje i przekazuje ich argumenty?
 3. **MCP** — jak udostępniać narzędzia niezależnie od konkretnej aplikacji?
-4. **Agent AI** — jak model może realizować cel wymagający kilku działań?
 
-Dodatkowo zobaczymy **Code Execution**, czyli generowanie i wykonywanie kodu przez model.
+Na kolejnych laboratoriach wykorzystamy te same przykłady do poznania
+[Code Execution](../05-code-execution/README.md) oraz
+[architektury agentów AI](../06-architektura-agentow/README.md).
 
 ### Scenariusz
 
@@ -30,9 +31,7 @@ Użytkownik będzie mógł wydawać polecenia w języku naturalnym:
 
 > Czy lampka jest teraz włączona?
 
-> Upewnij się, że lampka jest włączona.
-
-Zobaczymy, jak model wybiera narzędzia, korzysta z ich wyników i podejmuje kolejne działania.
+Zobaczymy, jak model wybiera narzędzia i korzysta z ich wyników.
 
 Do wykonania ćwiczeń nie jest wymagane fizyczne urządzenie Shelly — można korzystać z symulatora.
 
@@ -67,8 +66,6 @@ Kod źródłowy znajduje się w osobnym repozytorium:
 | [02-Shelly.ToolCalling](https://github.com/sulmar/shelly/tree/main/02-Shelly.ToolCalling) | Tool Calling | Model wybiera i wywołuje funkcje sterujące urządzeniem. |
 | [03-Shelly.Mcp](https://github.com/sulmar/shelly/tree/main/03-Shelly.Mcp) | MCP Server | Udostępnia narzędzia przez protokół MCP. |
 | [04-Shelly.McpClient](https://github.com/sulmar/shelly/tree/main/04-Shelly.McpClient) | MCP Client | Odkrywa narzędzia serwera MCP i udostępnia je modelowi. |
-| [05-Shelly.Agent](https://github.com/sulmar/shelly/tree/main/05-Shelly.Agent) | Agent AI | Realizuje zadania wymagające obserwacji, działania i weryfikacji. |
-| [06-Shelly.CodeExecution](https://github.com/sulmar/shelly/tree/main/06-Shelly.CodeExecution) | Code Execution | Generuje i wykonuje kod Pythona w kontenerze Docker. |
 
 ### Eksperymenty
 
@@ -77,8 +74,7 @@ Kod źródłowy znajduje się w osobnym repozytorium:
 | EXP-00 | HTTP API | Ćwiczenie |
 | EXP-01 | Tool Calling — odczyt stanu lampki | Zadanie programistyczne |
 | EXP-02 | MCP — Inspector, serwer i klient | Zadanie programistyczne |
-| EXP-03 | Agent AI — włączenie lampki na określony czas | Zadanie problemowe i programistyczne |
-| EXP-04 | Code Execution — obliczenie kosztu energii | Demonstracja prowadzącego |
+| EXP-03 | Dla chętnych — `Switch.Toggle` | Zadanie programistyczne |
 
 **[Instrukcje eksperymentów →](./experiments.md)**
 
@@ -89,7 +85,6 @@ Do wykonania ćwiczeń potrzebne są:
 - .NET SDK
 - [Ollama](https://ollama.com/download)
 - Node.js i npm — do uruchomienia MCP Inspector
-- Docker — do demonstracji Code Execution
 
 #### 1. Pobierz model
 
@@ -102,8 +97,8 @@ Możesz również wykorzystać inny model obsługujący Tool Calling, dostosowan
 #### 2. Pobierz repozytorium
 
 ```bash
-git clone LINK_DO_REPOZYTORIUM
-cd Shelly
+git clone https://github.com/sulmar/shelly.git
+cd shelly
 ```
 
 #### 3. Uruchom symulator
@@ -142,7 +137,9 @@ Pozostałe przykłady uruchamiaj zgodnie z instrukcjami w ich katalogach.
 | Tool Calling | Mechanizm, w którym model zgłasza żądanie wywołania funkcji |
 | Tool Result | Wynik wykonania narzędzia przekazywany do modelu |
 | MCP | Protokół udostępniania narzędzi i innych zasobów klientom |
-| Agent AI | System realizujący cele przez obserwację i podejmowanie działań |
-| Code Execution | Wykonywanie kodu wygenerowanego przez model |
 
 > **Model wybiera narzędzie, ale to aplikacja odpowiada za jego wykonanie.**
+
+### Wykład
+
+Teoria: [Wykład 03 — Tool Calling i MCP](../../docs/lectures/03-tool-calling-i-mcp/README.md)

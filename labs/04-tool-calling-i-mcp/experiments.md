@@ -2,7 +2,7 @@
 
 ## Laboratorium 04 — Eksperymenty
 
-### Od HTTP API do agentów AI
+### Tool Calling i MCP
 
 ---
 
@@ -20,8 +20,7 @@ Przed rozpoczęciem przygotuj środowisko zgodnie z [README.md](./README.md).
 | EXP-00 | HTTP API | Ćwiczenie |
 | EXP-01 | Tool Calling — odczyt stanu lampki | Zadanie programistyczne |
 | EXP-02 | MCP — Inspector, serwer i klient | Zadanie programistyczne |
-| EXP-03 | Agent AI — włączenie lampki na określony czas | Zadanie problemowe i programistyczne |
-| EXP-04 | Code Execution — obliczenie kosztu energii | Demonstracja prowadzącego |
+| EXP-03 | Dla chętnych — `Switch.Toggle` | Zadanie programistyczne |
 
 ---
 
@@ -135,73 +134,7 @@ Sprawdź, czy klient automatycznie odkrywa dodane narzędzie, a model potrafi z 
 
 ---
 
-## EXP-03 — Agent AI
-
-**Cel:** zrozumienie, jak możliwości agenta zależą od dostępnych narzędzi.
-
-Uruchom aplikację `05-Shelly.Agent`.
-
-Sprawdź działanie polecenia:
-
-> Upewnij się, że lampka jest włączona.
-
-Zaobserwuj, czy agent sprawdza aktualny stan urządzenia i weryfikuje rezultat działania.
-
-### Zadanie
-
-Użytkownik chce wydać polecenie:
-
-> Włącz lampkę na 5 sekund, a następnie ją wyłącz.
-
-**Rozszerz aplikację tak, aby agent potrafił samodzielnie zrealizować takie polecenie.**
-
-Nie implementuj na stałe sekwencji włączania i wyłączania lampki.
-
-Agent powinien samodzielnie zdecydować, jakie działania wykonać i w jakiej kolejności.
-
-**Wymagania:**
-
-- Zidentyfikuj ograniczenia obecnego rozwiązania.
-- Zaproponuj sposób rozszerzenia możliwości agenta.
-- Zaimplementuj rozwiązanie.
-- Sprawdź polecenia z różnymi czasami.
-- Zweryfikuj końcowy stan lampki.
-
-**Pytanie:** czy do rozwiązania problemu potrzebny jest lepszy model, zmiana promptu czy dodatkowe narzędzie?
-
----
-
-## EXP-04 — Code Execution (demonstracja)
-
-**Cel:** poznanie mechanizmu generowania i wykonywania kodu przez agenta.
-
-Uruchomimy aplikację `06-Shelly.CodeExecution`.
-
-Użytkownik pyta:
-
-> Ile kosztuje świecenie mojej lampki przez 500 godzin przy cenie 4,50 zł/kWh?
-
-Agent może:
-
-1. Odczytać aktualną moc lampki.
-2. Wygenerować kod Pythona obliczający zużycie energii i koszt.
-3. Uruchomić kod w kontenerze Docker.
-4. Odczytać wynik wykonania.
-5. Przedstawić odpowiedź użytkownikowi.
-
-### Pytania do dyskusji
-
-- Dlaczego model zdecydował się wygenerować kod?
-- Czy te obliczenia można wykonać bez Pythona?
-- Co się stanie, jeśli wygenerowany kod zawiera błąd?
-- Czy model potrafi poprawić kod na podstawie komunikatu błędu?
-- Jakie zagrożenia wiążą się z wykonywaniem kodu wygenerowanego przez LLM?
-
-> **Wygenerowanie kodu nie oznacza jego wykonania, a poprawne wykonanie nie gwarantuje poprawności wyniku.**
-
----
-
-## ## EXP-05 Dla chętnych — Rozszerzenie możliwości Shelly
+## EXP-03 — Dla chętnych: rozszerzenie możliwości Shelly
 
 W [dokumentacji Shelly](https://shelly-api-docs.shelly.cloud/gen2/ComponentsAndServices/Switch/#switchtoggle) znajdziesz metodę `Switch.Toggle`, która
 przełącza aktualny stan gniazdka.
@@ -245,8 +178,8 @@ Po wykonaniu eksperymentów powinieneś rozumieć:
 
 - jak model korzysta z narzędzi udostępnionych przez aplikację,
 - jak rozszerzać możliwości modelu przez Tool Calling,
-- jak serwer MCP udostępnia narzędzia różnym klientom,
-- dlaczego agent potrzebuje odpowiednio zaprojektowanego środowiska,
-- jakie możliwości i zagrożenia wprowadza Code Execution.
+- jak serwer MCP udostępnia narzędzia różnym klientom.
+
+Na kolejnym laboratorium: [Laboratorium 05 — Code Execution](../05-code-execution/README.md).
 
 > **Nie pytamy tylko, czy model potrafi wykonać zadanie. Pytamy również, jakie możliwości musimy mu udostępnić, aby mógł je wykonać.**

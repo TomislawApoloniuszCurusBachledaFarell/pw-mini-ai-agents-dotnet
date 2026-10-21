@@ -207,7 +207,7 @@ Po wykładzie powinieneś rozumieć:
 ## Laboratorium
 
 Praktyczne wykorzystanie tych mechanizmów omówimy podczas
-[Laboratorium 04 — Tool Calling i MCP](../../../labs/04-tool-calling/readme.md).
+[Laboratorium 04 — Tool Calling i MCP](../../../labs/04-tool-calling-i-mcp/README.md).
 
 ## Na kolejnym wykładzie
 
