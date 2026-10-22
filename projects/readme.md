@@ -29,6 +29,7 @@ Projekty realizowane przez zespoły z różnych grup są wymienione w tabeli ka�
 | Greedy Student ([wizja](https://github.com/loczek356/Greedy_Student/blob/main/vision.md)) | Interaktywna mapa zniżek studenckich (restauracje, kawiarnie, bary, muzea; filtrowanie po kategorii, odległości i wysokości rabatu; agent automatycznie wyszukujący nowe zniżki) | Daniel Nowakowski, Michał Mueller, Jakub Motyka, Jakub Mendel | [loczek356/Greedy_Student](https://github.com/loczek356/Greedy_Student) |
 | JuniorQuest ([wizja](https://github.com/paw10x/JuniorQuest/blob/main/vision.md)) *(wspólny z grupą 2)* | Asystent AI wspierający studentów informatyki w szukaniu pierwszej pracy (agregacja ofert, dopasowanie CV, śledzenie aplikacji) | Martyna Budrewicz, Paweł Nowak | [paw10x/JuniorQuest](https://github.com/paw10x/JuniorQuest) |
 | Graphora ([wizja](https://github.com/ulyanafrolova/graphora-AI#vision)) *(wspólny z grupą 2)* | Platforma analizująca architekturę repozytoriów Git (graf zależności, współpracujące agenty AI, weryfikacja odpowiedzi względem grafu) | Anna Granos, Ulyana Frolova | [ulyanafrolova/graphora-AI](https://github.com/ulyanafrolova/graphora-AI) |
+| czytAI-i-sluchAI-ai ([wizja](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai/blob/main/vision.md)) | Narzędzie, które dzięki wykorzystaniu AI dobiera idealną scieżkę dźwiękową do aktualnie czytanego fragmentu książki | Michał Obrębski, Tymon Piwowarski | [MichalObrebski/czytAI-i-sluchAI-ai](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai) |
 
 ## Grupa 4
 
