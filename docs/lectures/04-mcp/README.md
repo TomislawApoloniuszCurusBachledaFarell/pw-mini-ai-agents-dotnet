@@ -440,6 +440,9 @@ Takie podejście bywa podatne na zmiany wyglądu i struktury strony.
 **WebMCP** to rozwijana propozycja udostępniania agentom
 ustrukturyzowanych narzędzi bezpośrednio przez strony internetowe.
 
+Specyfikacja jest rozwijana w ramach W3C Web Machine Learning Community Group:
+[WebMCP — projekt specyfikacji](https://webmachinelearning.github.io/webmcp).
+
 Zamiast odtwarzać działania użytkownika przez interfejs,
 agent mógłby korzystać z funkcji udostępnionych przez witrynę.
 
@@ -542,6 +545,7 @@ Po wykładzie powinieneś rozumieć:
 - [MCP — Prompts](https://modelcontextprotocol.io/specification/2025-06-18/server/prompts)
 - [MCP Inspector](https://github.com/modelcontextprotocol/inspector)
 - [Model Context Protocol — C# SDK](https://github.com/modelcontextprotocol/csharp-sdk)
+- [WebMCP — projekt specyfikacji](https://webmachinelearning.github.io/webmcp)
 
 ## Laboratorium
 
