@@ -30,10 +30,9 @@ Projekty realizowane przez zespoły z różnych grup są wymienione w tabeli ka�
 | JuniorQuest ([wizja](https://github.com/paw10x/JuniorQuest/blob/main/vision.md)) *(wspólny z grupą 2)* | Asystent AI wspierający studentów informatyki w szukaniu pierwszej pracy (agregacja ofert, dopasowanie CV, śledzenie aplikacji) | Martyna Budrewicz, Paweł Nowak | [paw10x/JuniorQuest](https://github.com/paw10x/JuniorQuest) |
 | Graphora ([wizja](https://github.com/ulyanafrolova/graphora-AI#vision)) *(wspólny z grupą 2)* | Platforma analizująca architekturę repozytoriów Git (graf zależności, współpracujące agenty AI, weryfikacja odpowiedzi względem grafu) | Anna Granos, Ulyana Frolova | [ulyanafrolova/graphora-AI](https://github.com/ulyanafrolova/graphora-AI) |
 | czytAI-i-sluchAI-ai ([wizja](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai/blob/main/vision.md)) | Narzędzie, które dzięki wykorzystaniu AI dobiera idealną scieżkę dźwiękową do aktualnie czytanego fragmentu książki | Michał Obrębski, Tymon Piwowarski | [MichalObrebski/czytAI-i-sluchAI-ai](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai) |
-| Simracing ([wizja](https://github.com/yosewi/Agenci-AI) | | |
-| Hair ([wizja](https://github.com/loczek356/Hair) | | | 
-| LoreKeeper (https://github.com/maciekmazurek/LoreKeeper) | | | 
-
+| SimWall ([wizja](https://github.com/yosewi/Agenci-AI/blob/main/docs/vision.md)) | Asystent AI dla simracerów (analiza telemetrii z F1, wskazywanie zakrętów, na których gracz traci czas, porównywanie sesji i postępów, wsparcie strategii i podpowiedzi w trakcie wyścigu) | Mateusz Rabantek, Karol Wójcik, Julian Sowiński | [yosewi/Agenci-AI](https://github.com/yosewi/Agenci-AI) |
+| Hair ([wizja](https://github.com/loczek356/Hair/blob/main/vision.md)) | Inteligentny matchmaker studencki (łączenie studentów w zbalansowane, interdyscyplinarne zespoły do projektów, hackathonów i startupów według umiejętności, ambicji i dostępności, z uzasadnieniem rekomendacji) | Michał Mueller, Jakub Motyka, Kazimierz Krześniak | [loczek356/Hair](https://github.com/loczek356/Hair) |
+| LoreKeeper ([wizja](https://github.com/maciekmazurek/LoreKeeper#readme)) | Asystent i strażnik spójności świata dla twórców RPG, scenarzystów gier i pisarzy fantasy (odpowiedzi oparte wyłącznie na notatkach autora przez RAG, weryfikacja spójności wątków, tworzenie kart postaci, integracja z Obsidianem przez MCP) | Maciej Mazurek, Ewelina Karpińska | [maciekmazurek/LoreKeeper](https://github.com/maciekmazurek/LoreKeeper) |
 
 ## Grupa 4
 
