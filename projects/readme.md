@@ -31,6 +31,8 @@ Projekty realizowane przez zespoły z różnych grup są wymienione w tabeli ka�
 | Graphora ([wizja](https://github.com/ulyanafrolova/graphora-AI#vision)) *(wspólny z grupą 2)* | Platforma analizująca architekturę repozytoriów Git (graf zależności, współpracujące agenty AI, weryfikacja odpowiedzi względem grafu) | Anna Granos, Ulyana Frolova | [ulyanafrolova/graphora-AI](https://github.com/ulyanafrolova/graphora-AI) |
 | czytAI-i-sluchAI-ai ([wizja](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai/blob/main/vision.md)) | Narzędzie, które dzięki wykorzystaniu AI dobiera idealną scieżkę dźwiękową do aktualnie czytanego fragmentu książki | Michał Obrębski, Tymon Piwowarski | [MichalObrebski/czytAI-i-sluchAI-ai](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai) |
 | Simracing ([wizja](https://github.com/yosewi/Agenci-AI) | | |
+| Hair ([wizja](https://github.com/loczek356/Hair) | | | 
+
 
 ## Grupa 4
 
