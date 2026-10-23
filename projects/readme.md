@@ -32,6 +32,7 @@ Projekty realizowane przez zespoły z różnych grup są wymienione w tabeli ka�
 | czytAI-i-sluchAI-ai ([wizja](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai/blob/main/vision.md)) | Narzędzie, które dzięki wykorzystaniu AI dobiera idealną scieżkę dźwiękową do aktualnie czytanego fragmentu książki | Michał Obrębski, Tymon Piwowarski | [MichalObrebski/czytAI-i-sluchAI-ai](https://github.com/MichalObrebski/czytAI-i-sluchAI-ai) |
 | Simracing ([wizja](https://github.com/yosewi/Agenci-AI) | | |
 | Hair ([wizja](https://github.com/loczek356/Hair) | | | 
+| LoreKeeper (https://github.com/maciekmazurek/LoreKeeper) | | | 
 
 
 ## Grupa 4
